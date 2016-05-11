@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>UserSounds</title>
+	</head>
+
+	<body>
+		<h1>Register with UserSounds</h1>
+
+		{% if registered %}
+		usersounds says: <strong> thanks for registering!</strong>
+		<a href="/usersounds/">Return to the homepage.</a><br />
+		{% else %}
+		usersounds says: <strong> register here! </strong><br />
+		<form id="user_form" method="post" action="{% url "register" %}" enctype="multipart/form-data">
+			{% csrf_token %}
+			{{ user_form.as_p }}
+
+			<input type="submit" name="submit" value="Register" />
+		</form>
+		{% endif %}
+	</body>
+</html>

@@ -1,0 +1,34 @@
+1. install libsndfile:
+
+$ cd libsndfile-1.0.26
+$ sudo ./configure && make && make install
+
+Note:
+  Installation directories :
+
+    Library directory : ................... /usr/local/lib
+    Program directory : ................... /usr/local/bin
+    Pkgconfig directory : ................. /usr/local/lib/pkgconfig
+    HTML docs directory : ................. /usr/local/share/doc/libsndfile1-dev/html
+
+OR, since it tries to go into /opt and install for octave, just use macports.
+
+I already have it in /opt/local/lib/:
+
+libsndfile.1.dylib
+libsndfile.a
+libsndfile.dylib
+
+
+2. gcc looks in /usr/local/include for header files, not in the Macports "opt" directory,
+so make a symlink.
+
+sudo ln -s /opt/local/include/sndfile.h /usr/local/include/sndfile.h
+
+
+3. Link libsndfile to your C source and compile your C source to a command-line executable all at once with either command:
+
+$ gcc -v `pkg-config --libs sndfile` /Users/ajw/Desktop/CTEST/file_io.c /Users/ajw/Desktop/CTEST/main.c -o /Users/ajw/Desktop/CTEST/ctestexecute
+
+$ gcc -v /opt/local/lib/libsndfile.dylib /Users/ajw/Desktop/CTEST/file_io.c /Users/ajw/Desktop/CTEST/main.c -o /Users/ajw/Desktop/CTEST/ctestexecute
+

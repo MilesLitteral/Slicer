@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>SoundShake</title>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/components/jquery/dist/jquery.js"></script>
+    <script src="js/components/recorder.js/dist/recorder.js"></script>
+    <script src="js/components/d3/d3.js"></script>
+    <script src="js/components/aws-sdk/dist/aws-sdk.js"></script>
+    <script src="js/components/hammerjs/hammer.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+    <svg id="nav" class="shadow" viewBox="0 0 1000 150 ">
+        <rect width="1000" height="300" />
+        <text id="Browse" fill="black" x="200" y="75">Browse</text>
+        <text id="Browse"fill='black'x='400' y='75'>Blend</text>
+        <text id="Browse"fill='black'x='600' y='75'>Edit</text>
+        <text id="Browse"fill='black'x='800' y='75'>Upload</text>
+
+    </svg>
+
+
+    <div id="temp">
+
+        <svg class="sf shadow" id="soundFileTemplate" viewBox="0 0 690.3 312.2 ">
+            <rect width="690.1" height="312.21" x=".2" class="soundFileGroup" rx="12" ry="12" />
+
+            <text class="soundFileText" transform="translate(23.8 289.8)">Recording0.wav</text>
+
+            <path d="M433.6 198.7c0 5.2-3.7 11.5-8.2 14.1l-72.2 41.8c-4.5 2.6-11.8 2.6-16.3 0l-72.3-41.7c-4.5-2.6-8.2-9-8.2-14.1v-83.6c0-5.2 3.7-11.5 8.2-14.1l72.3-41.7c4.5-2.6 11.8-2.6 16.3 0l72.3 41.7c4.5 2.6 8.2 9 8.2 14.1v83.5z" class="soundFileOuter" />
+
+            <path d="M312.6 119.6c0-7.7 5.5-10.9 12.2-7l66.5 38.4c6.7 3.9 6.7 10.2 0 14.1l-66.5 38.4c-6.7 3.9-12.2.7-12.2-7v-76.9z" class="soundFilePlay" />
+
+            <path d="M409.6 215.5C242.7 182 97 130.4 0 75.2v224.9c0 6.6 5.6 11.5 12.2 11.5h666.1a11.3 11.3 0 0 0 11.7-11.5v-50.5c-84-2.8-180.1-13.9-280.4-34.1z" class="soundFileTransparency" />
+
+        </svg>
+
+
+    </div>
+
+
+
+    <svg class="shadow" id="recordButton" viewBox="0 0 608.8 608.8">
+
+        <circle id="button" class="cls-1" cx="304.3" cy="304.3" r="304.3" />
+
+        <path id="note" class="cls-2" d="M289.2 300v129s-53.8-15.6-59 34.7c-.3 50.2 88 32.6 87-1s.4-117.6.4-117.6 79 34.6 17.7 96c-4.5 4.5 54.5-2.6 41.5-69-5.8-29.8-46.2-53.4-50.7-59s-10-9.3-11.2-18-25.6-11-25.6 5z" />
+
+        <path id="lowerVol" class="cls-2" d="M304 231a119 119 0 0 1 69.7 22.4c6 4.3 7.6 12 3.6 17.8a12.5 12.5 0 0 1-17.7 3c-12.2-8.4-25.4-14.3-40-16.6-23.7-3.7-45.6 1-66 13.5-2.6 1.8-5.3 3.7-8.3 4.7a12 12 0 0 1-14.5-5.7c-3-5.3-2.3-11.7 2.5-15.4a118.7 118.7 0 0 1 17.4-11A115.5 115.5 0 0 1 304 231z" />
+
+        <path id="midVol" class="cls-2" d="M304 171.2c40 .2 76 12 108.7 35 9.5 6.6 11.8 18.7 5.5 27.7s-18 11-27.6 4.6c-19-13-39.7-22.3-62.6-26-37-5.7-71 1.4-102.7 21.2-4.2 2.6-8.4 5.6-13 7.2a18.6 18.6 0 0 1-22.7-9c-4.6-8.2-3.6-18.2 4-24a185.2 185.2 0 0 1 27-17 180.3 180.3 0 0 1 83.4-19.8z" />
+
+        <path id="topVol" class="cls-2" d="M303.8 96c58.5 0 111.5 17.4 159.2 51 14 10 17.3 27.6 8 41s-26.4 16.3-40.3 6.8c-28-19-58-32.7-91.8-38-54-8.5-104.2 2-150.6 31-6.2 3.8-12.4 8-19.2 10.4-13 4.5-26.6-1.3-33-13s-5.4-27 5.6-35.2a271.3 271.3 0 0 1 39.7-25c38.4-19.6 79.3-29 122.3-29z" />
+
+    </svg>
+
+
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

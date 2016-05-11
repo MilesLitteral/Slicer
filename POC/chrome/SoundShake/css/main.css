@@ -1,0 +1,23 @@
+body {
+    margin: 0 auto 0 auto;
+    max-width: 600px
+}
+
+ul#downloads {
+    display: block;
+    list-style: none;
+}
+
+#recordButton:active,
+#recordButton:disabled {
+    color: white;
+    background-color: red;
+}
+
+div {
+    background-color: lightgray;
+    position: center;
+    margin: 0 auto;
+    width: 400px;
+    padding: 20px
+}
